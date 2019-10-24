@@ -13,18 +13,38 @@ module.exports = {
 	resolve: {
 		extensions: ['.js', '.jsx']
 	},
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				styles: {
+					name: 'styles',
+					test: /\.css$/,
+					chunks: 'all',
+					enforce: true,
+				},
+			},
+		},
+	},
 	module: {
 		rules: [
 		{
 			test: /\.css$/,
 			use: [
-				'vue-style-loader',
 				{
-					loader: 'css-loader',  options: {sourceMap: true}
+					loader: MiniCssExtractPlugin.loader,
+					options: {
+						publicPath: './assets/css/'
+					}
 				},
-				{
-					loader: 'postcss-loader',  options: {sourceMap: true}
-				}
+				'css-loader',
+				'postcss-loader'
+				// 'vue-style-loader',
+				// {
+				// 	loader: 'css-loader',  options: {sourceMap: true}
+				// },
+				// {
+				// 	loader: 'postcss-loader',  options: {sourceMap: true}
+				// }
 
 
 			]
@@ -41,14 +61,14 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new CleanWebpackPlugin(),
+		//new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			title: 'Webpack Config',
 			template: './src/index.pug'
 		}),
 		new MiniCssExtractPlugin({
-			filename: 'style.css'
+			filename: '[name].css'
 		}),
 		new VueLoaderPlugin()
 	]

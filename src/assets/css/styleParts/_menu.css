@@ -1,0 +1,27 @@
+nav.nav{
+	background: $backgroundColor;
+	height: 100vh;
+}
+.main{
+    background: url(https://picsum.photos/1200/800);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+ul.menu{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	width: 300px;
+}
+.menu__link {
+	display: inline-block;
+	width: 300px;
+	margin: 3px;
+	border-bottom: 1px solid $mainColor;
+	padding: 3px;
+	color: $textColor;
+
+}

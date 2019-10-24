@@ -1,0 +1,19 @@
+@import 'styleParts/_variable';
+@import 'styleParts/_menu';
+@import 'styleParts/_todo';
+
+body{
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: $textColor;
+}
+
+.wrapper{
+	display: flex;
+}
+
+*:focus{
+	outline: none;
+}

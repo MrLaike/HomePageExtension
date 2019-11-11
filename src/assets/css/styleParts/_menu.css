@@ -1,20 +1,17 @@
 nav.nav{
 	background: $backgroundColor;
 	height: 100vh;
+	position: fixed;
 }
-.main{
-    background: url(https://picsum.photos/1200/800);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-}
-ul.menu{
+.menu{
 	padding: 0;
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
 	width: 300px;
+}
+.menu.hidden{
+	display: none;
 }
 .menu__link {
 	display: inline-block;
@@ -24,4 +21,37 @@ ul.menu{
 	padding: 3px;
 	color: $textColor;
 
+}
+
+.hamburger{
+	width: 40px;
+	height: 40px;
+	border-radius: 50% 50%;
+	background: #222;
+	position: absolute;
+	color: #fff;
+	right: -20px;
+	top: 40%;
+}
+.hamburger__line, .hamburger__line:after, .hamburger__line:before{
+	display: block;
+	position: absolute;
+	width: 12px;
+	height: 1px;
+	border-radius: 3px;
+	background: #fff;
+
+}
+.hamburger__line:after, .hamburger__line:before{
+	content: '';
+}
+.hamburger__line{
+	top: 45%;
+	left: 52%
+}
+.hamburger__line:before{
+	top: 3px;
+}
+.hamburger__line:after{
+	bottom: 3px;
 }

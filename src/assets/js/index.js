@@ -1,7 +1,6 @@
-import '../css/style.css';
 import Vue from 'vue';
 import App from './components/App.vue';
-
+import style from '../css/style.css';
 
 
 console.log("Hello");

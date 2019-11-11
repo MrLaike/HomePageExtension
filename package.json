@@ -5,8 +5,9 @@
   "main": "main.js",
   "dependencies": {
     "autoprefixer": "^9.6.1",
-    "cssnano": "^4.1.10",
     "clean-webpack-plugin": "^3.0.0",
+    "cssnano": "^4.1.10",
+    "fuse.js": "^3.4.5",
     "html-webpack-plugin": "^3.2.0",
     "postcss": "^7.0.18",
     "postcss-loader": "^3.0.0",

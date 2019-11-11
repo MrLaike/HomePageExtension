@@ -1,12 +1,13 @@
-.todo{
+.todo-module{
 	display: block;
 	background: inherit;
 	color: #eee;
 	margin: 20px;
+	left: 40%;
 	width: 600px;
 	/*border-radius: 4px;*/
 	z-index: 1;
-	position: relative;
+	position: absolute;
 	overflow: hidden;
 	li{
 		display: block;

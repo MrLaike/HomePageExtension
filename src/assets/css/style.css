@@ -1,19 +1,48 @@
 @import 'styleParts/_variable';
 @import 'styleParts/_menu';
 @import 'styleParts/_todo';
+@import 'styleParts/_bookmark';
+@import 'styleParts/_datetime';
 
-body{
-	margin: 0;
-}
 a{
 	text-decoration: none;
 	color: $textColor;
 }
 
 .wrapper{
-	display: flex;
+	display: block;
 }
 
 *:focus{
 	outline: none;
+}
+
+ul,li{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	margin: 0;
+    background: url(https://picsum.photos/1200/800);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+
+.today{
+	position: absolute;
+	font-size: 1.3em;
+	color: white;
+	left: 45%;
+}
+
+
+.main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }

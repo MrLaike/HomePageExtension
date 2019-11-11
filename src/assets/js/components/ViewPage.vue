@@ -1,23 +1,36 @@
 <template>
 	<div class="wrapper">
 		<nav class="nav">
-			<ul class="menu">
+			<ul class="menu" :class="{hidden: isHidden}">
 				<menu-title v-for="title in menuTitles" :titles="title"></menu-title>	
 			</ul>
+			<div class="hamburger" @click="toggleMenu()">
+				<a href="#" class="hamburger__line"></a>
+			</div>
 		</nav>
 		<div class="main">
-			<todo></todo>
+			<!-- <datetime-module></datetime-module>
+			<weather-module></weather-module>
+
+			<p class="today">Today: Read day</p>
+			 -->
+			<!-- <todo-module></todo-module> -->
+			<bookmark-module></bookmark-module>
 		</div>
 	</div>
 </template>
 <script>
 	import MenuTitle from './Menu.vue';
-	import todo from './ToDo.vue';
+	import todoModule from './ToDo.vue';
+	import bookmarkModule from './BookmarkModule.vue';
+	import weatherModule from './WeatherModule.vue';
+	import datetimeModule from './DateTimeModule.vue';
 
 	export default{
 		data: function() {
 			return {
-				menuTitles: ['Home', 'Bookmarks', 'News'],
+				menuTitles: ['Home', 'Bookmarks', 'GitHub', 'News'],
+				isHidden: true,
 
 				// todoListArr: [
 				// 	{
@@ -32,9 +45,16 @@
 		},
 		components: {
 			MenuTitle,
-			todo
+			bookmarkModule,
+			todoModule,
+			datetimeModule,
+			weatherModule
 		},
 		methods: {
+			toggleMenu: function(){
+				this.isHidden = !this.isHidden
+			
+			}
 
 		}
 	}

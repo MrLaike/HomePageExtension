@@ -1,0 +1,57 @@
+
+.bookmark{
+	background: #33333377;
+	text-align: center;
+	width: 100%;
+	padding-left: 45px;
+	min-height: 100vh;
+}
+
+
+.folder{
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.list-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.list-item{
+	display: block;
+	padding: 20px;
+	background: #212123;
+	margin: 10px;
+	border-radius: 2px;
+
+}
+
+.bookmark-search{
+	padding: 20px;
+	margin: 20px;
+	border-radius: 2px;
+	border: 0px;
+	width: 60%;
+
+}
+
+.column > .list-item{
+
+	width: 100%;
+
+}
+
+.block > .list-item{
+	width: 200px;
+	height: 200px;
+}
+
+.block-style{
+	display: inline-block;
+	font-size: 2em;
+	color: #f23e2d;
+	width: 30px;
+	height: 30px;
+}

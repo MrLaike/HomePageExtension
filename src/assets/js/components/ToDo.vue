@@ -1,6 +1,6 @@
 
 <template>
-	<div class="todo" >
+	<div class="todo-module" >
 		<h2>TODO</h2>
 		<ul v-show="todoList.length">
 			<li v-for="todo in todoList" 

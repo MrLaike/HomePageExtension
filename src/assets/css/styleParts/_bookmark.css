@@ -2,7 +2,7 @@
 .bookmark{
 	text-align: center;
 	width: 100%;
-	padding-left: 45px;
+	padding: 0 45px;
 }
 
 
@@ -45,4 +45,22 @@
 	color: #f23e2d;
 	width: 30px;
 	height: 30px;
+}
+
+.filter{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	padding: 0 60px;
+}
+
+.hash-tag{
+	padding-left: 60px;
+}
+
+.tags{
+	padding: 5px;
+	&.active{
+		background: $backgroundColor;
+	}
 }

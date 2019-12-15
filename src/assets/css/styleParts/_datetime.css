@@ -1,8 +1,18 @@
 .datetime{
-
+	position: absolute;
+	top: 200px;
+	text-align: center;
+	left: 36%;
 }
 
 .time{
 	font-size: 60px;
-	color: #fff
+	color: #fff;
+	margin: 0;
+}
+
+.date{
+	font-size: 20px;
+	color: #fff;
+	
 }

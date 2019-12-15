@@ -1,0 +1,17 @@
+.search-input{
+	padding: 20px;
+	margin: 20px;
+	background: transparent;
+	width: 100%;
+	color: $lightTextColor;
+	border: 0px;
+	border-bottom: 1px solid $primeColor;
+
+	&::placeholder{
+		color: $lightTextColor;
+	}
+
+}
+.search{
+	width: 80%;
+}

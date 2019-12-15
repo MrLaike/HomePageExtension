@@ -3,14 +3,16 @@
 @import 'styleParts/_todo';
 @import 'styleParts/_bookmark';
 @import 'styleParts/_datetime';
+@import 'styleParts/_search';
+/*@import '../../../node_module/font-awesome/css/font-awesome.min';*/
 
 a{
 	text-decoration: none;
-	color: $textColor;
+	color: $lightTextColor;
 }
 
 .wrapper{
-	display: block;
+	min-height: 100vh;
 }
 
 *:focus{
@@ -30,8 +32,21 @@ body{
     background-attachment: fixed;
     width: 100%;
     overflow-y: scroll;
-}
 
+}
+.container{
+	background: #33333366;
+}
+.block-s4{
+	padding: 10px;
+	width: 20px;
+	height: 20px;
+}
+.block-s6{
+	padding: 20px;
+	width: 30px;
+	height: 30px;
+}
 
 .today{
 	position: absolute;
@@ -42,6 +57,7 @@ body{
 
 
 .main{
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;

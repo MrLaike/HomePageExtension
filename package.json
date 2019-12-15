@@ -21,6 +21,7 @@
   "devDependencies": {
     "css-loader": "^3.2.0",
     "cssnano-preset-advanced": "^4.0.7",
+    "font-awesome": "^4.7.0",
     "mini-css-extract-plugin": "^0.8.0",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10",

@@ -4,11 +4,13 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
+    "@huchenme/github-trending": "^2.1.2",
     "autoprefixer": "^9.6.1",
     "clean-webpack-plugin": "^3.0.0",
     "cssnano": "^4.1.10",
     "fuse.js": "^3.4.5",
     "html-webpack-plugin": "^3.2.0",
+    "markdown-it": "^10.0.0",
     "postcss": "^7.0.18",
     "postcss-loader": "^3.0.0",
     "precss": "^4.0.0",

@@ -17,7 +17,7 @@
 				bookmarks: this.getBookmarks(),
 				results: [],
 				searchText: "",
-				searchType: "web"
+				searchType: "bookmarks"
 			}
 		},
 

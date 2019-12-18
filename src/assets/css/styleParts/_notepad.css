@@ -1,0 +1,43 @@
+.notepad{
+	display: flex;
+	width: 100%;
+	min-height: 80vh;
+}
+
+.text-boarder{
+	width: 100%;
+	background: #fff;
+	padding-left: 3px;
+}
+.tool-bar{
+	display: flex;
+	background: #eee;
+	justify-content: flex-end;	
+}
+.notepad__button{
+	padding: 4px;
+	margin: 8px 2px;
+}
+.editor.show{
+	display: block;
+}
+div.night{
+	color: white;
+	background: #222;
+	.tool-bar{
+		background: #111;
+	}
+}
+
+
+.editor{
+	display: none;
+	width: 100%;
+	padding-right: 3px;
+	background: #fff;
+
+}
+textarea{
+	width: 99%;
+	resize: none;
+}

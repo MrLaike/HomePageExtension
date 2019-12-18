@@ -27,6 +27,9 @@
 	import searchInput from './SearchInput.vue';
 	import rightItem from './RightItem.vue';
 	import leftItem from './LeftItem.vue';
+	import gitTopList from './GitTopList.vue';
+	import notepadModule from './NotepadModule.vue'
+
 
 
 
@@ -38,7 +41,7 @@
 			return {
 				menuTitles: ['Home', 'Bookmarks', 'GitHub', 'News'],
 				bookmarksList: [],
-				currentModule: 'bookmarkModule',
+				currentModule: 'notepadModule',
 				// todoListArr: [
 				// 	{
 				// 		id: 1,
@@ -67,6 +70,8 @@
 			searchInput,
 			leftItem,
 			rightItem,
+			gitTopList,
+			notepadModule,
 		},
 		
 		methods: {
@@ -78,12 +83,9 @@
 				this.bookmarksList = resultArray 
 			},
 			setModule: function(moduleName){
-				console.log('ds', moduleName)
 				this.currentModule = moduleName
-				console.log(this.currentModule)
 			}
 		}
 	}
 
 </script>
-<style scoped></style>

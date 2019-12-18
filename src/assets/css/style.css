@@ -4,6 +4,8 @@
 @import 'styleParts/_bookmark';
 @import 'styleParts/_datetime';
 @import 'styleParts/_search';
+@import 'styleParts/_gittoplist';
+@import 'styleParts/_notepad';
 /*@import '../../../node_module/font-awesome/css/font-awesome.min';*/
 
 a{

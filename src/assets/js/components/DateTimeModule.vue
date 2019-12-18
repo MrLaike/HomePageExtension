@@ -33,7 +33,7 @@
 			},
 			getDate: function(){
 				let date = new Date()
-				let day = date.getDay() + 1
+				let day = date.getDate()
 				let month = date.getMonth() + 1
 				let year = date.getFullYear()
 				return day + " - " + month + " - " + year 

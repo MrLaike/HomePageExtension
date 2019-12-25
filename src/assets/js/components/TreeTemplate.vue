@@ -4,7 +4,7 @@
 		<a @click="toggle"  :class="{folder: isFolder}" :href="url">{{ !(title) ? url : title }}<span v-show="isFolder">{{isOpen ? "[-]" : "[+]"}}</span></a>
 		
 		<ul v-if="isFolder" v-show="isOpen">
-			<tree v-for="node in nodes" :title="node.title" :nodes="node.children" :url="node.url"></tree>
+			<tree v-for="node in nodes" :key="node.id" :title="node.title" :nodes="node.children" :url="node.url"></tree>
 		</ul>
 	</li>
 </template>

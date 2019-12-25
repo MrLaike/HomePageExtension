@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<ul class="list-wrapper">
-			<tree-item v-for="node in bookmarks" :nodes="node.children" :title="node.title" :url="node.url"></tree-item>
+			<tree-item v-for="node in bookmarks" :key="node.id" :nodes="node.children" :title="node.title" :url="node.url"></tree-item>
 		</ul>
 	</div>
 </template>

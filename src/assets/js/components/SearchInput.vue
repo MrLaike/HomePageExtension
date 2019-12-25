@@ -12,16 +12,15 @@
 	import Fuse from 'fuse.js';
 
 	export default {
-		data: function(){
+		data (){
 			return {
-				bookmarks: this.getBookmarks(),
 				results: [],
 				searchText: "",
 				searchType: "bookmarks"
 			}
 		},
 
-		created: function(){
+		created (){
 			this.debounceRunSearch = _.debounce(this.bookmarkSearch, 400)
 		},
 		watch: {
@@ -30,14 +29,14 @@
 			// }
 		},
 		methods: {
-			getBookmarks: function() {
+			getBookmarks () {
 				let that = this
 				chrome.bookmarks.getTree(
 					function(bookmarkTreeNodes){
 						that.bookmarks = bookmarkTreeNodes[0].children[0].children
 				})
 			},
-			runSearch: function() {
+			runSearch () {
 
 				switch(this.searchType){
 					case "bookmarks": 
@@ -49,12 +48,12 @@
 				}
 
 			},
-			webSearch: function(){
+			webSearch (){
 				let duckduckgo = "duckduckgo.com/?q="
 				let google = "google.com/search?q="
 				document.location.href = "https://"+google+this.searchText
 			},
-			bookmarkSearch: function(){
+			bookmarkSearch (){
 				var options = {
 					shouldSort: true,
 					tokenize: true,
@@ -78,6 +77,9 @@
 				this.$emit('get-result', this.results)
 				this.$emit('change-module', 'bookmarkModule')
 			}
+		},
+		beforeMount (){
+			this.getBookmarks()
 		}
 	}
 </script>

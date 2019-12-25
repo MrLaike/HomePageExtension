@@ -1,0 +1,16 @@
+.rss-new{
+	overflow-x: hidden;
+	display: flex;
+}
+
+.left-panel{
+	border-right: 1px solid $primeColor;
+	flex-grow: 2;
+	width: 100%;
+	background: $backgroundColor;
+}
+.rss-content{
+	width: 100%;
+	background: #eee;
+	flex-grow: 1;
+}

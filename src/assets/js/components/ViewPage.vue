@@ -28,7 +28,8 @@
 	import rightItem from './RightItem.vue';
 	import leftItem from './LeftItem.vue';
 	import gitTopList from './GitTopList.vue';
-	import notepadModule from './NotepadModule.vue'
+	import notepadModule from './NotepadModule.vue';
+	import rssNewsModule from './RssNewsModule.vue';
 
 
 
@@ -41,7 +42,7 @@
 			return {
 				menuTitles: ['Home', 'Bookmarks', 'GitHub', 'News'],
 				bookmarksList: [],
-				currentModule: 'notepadModule',
+				currentModule: 'rssNewsModule',
 				// todoListArr: [
 				// 	{
 				// 		id: 1,
@@ -72,6 +73,7 @@
 			rightItem,
 			gitTopList,
 			notepadModule,
+			rssNewsModule,
 		},
 		
 		methods: {

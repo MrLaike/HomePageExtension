@@ -1,8 +1,6 @@
 .datetime{
-	position: absolute;
-	top: 200px;
+	/*position: absolute;*/
 	text-align: center;
-	left: 36%;
 }
 
 .time{

@@ -1,10 +1,14 @@
 <template>
 		<div class="search">
-			<select name="search-type" v-model="searchType">
+			<div class="search-type">
+				<i class="fab fa-google"></i>
+			</div>
+<!-- 			<select name="search-type" v-model="searchType">
 				<option value="web">Web</option>
 				<option value="bookmarks">Bookmarks</option>
-			</select>
+			</select> -->
 			<input class="search-input" type="text" v-model="searchText" @keyup.enter="runSearch" placeholder="Enter what you want find">
+			<i class="fas fa-search search-icon"></i>
 		</div>
 </template>
 
@@ -21,7 +25,7 @@
 		},
 
 		created (){
-			this.debounceRunSearch = _.debounce(this.bookmarkSearch, 400)
+			// this.debounceRunSearch = _.debounce(this.bookmarkSearch, 400)
 		},
 		watch: {
 			// searchText: function(){

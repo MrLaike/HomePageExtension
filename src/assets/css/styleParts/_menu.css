@@ -1,10 +1,12 @@
 nav.nav{
 	display: flex;
 	width: 100%;
+	background: $primeBackground;
 }
 
-.left-section{
+.left-section, .right-section{
 	display: flex;
 	
+	align-items: center;
 }
 

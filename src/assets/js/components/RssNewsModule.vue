@@ -1,9 +1,11 @@
 <template>
 	<div class="rss-new">
 		<nav class="left-panel">
-			<h2>This is Navigation</h2>
-			<a @click = "changeSite" id="tproger">TProger</a>
-			<a @click = "changeSite" id="proglib">ProgLib</a>
+			<ul class="channels">
+				<li><h2>This is Navigation</h2></li>
+				<li><a @click = "changeSite" id="tproger">TProger</a></li>
+				<li><a @click = "changeSite" id="proglib">ProgLib</a></li>
+			</ul>
 		</nav>
 		<div class="rss-content">
 			<h3>Content</h3>
@@ -19,6 +21,7 @@ export default {
 	props: ['nodes', 'title', 'url', 'rssNew'],
 	data () {
 		return {
+			isTrue: false,
 			rssNew: '',
 			currentSite: 'tproger',
 			sites: {
@@ -42,17 +45,19 @@ export default {
 			let rssParser = require('rss-parser');
 			let parser = new rssParser()
 		 	let that = this
-			parser.parseURL(CORS_PROXY + this.sites[this.currentSite], function(err, feed) {
+			let me = parser.parseURL(CORS_PROXY + this.sites[this.currentSite], function(err, feed) {
 				if (err) throw err;
 				that.rssNew = feed.items
-				console.log(feed)
+
+				
+				// console.log(feed)
 				// feed.items.forEach(function(entry) {
 				// 	that.rssNew = that.rssNew + entry.title + ':' + entry.link;
 				// })
 			})
 		},
 		changeSite (e){
-			console.log(this.sites[this.currentSite], this.currentSite)
+			// console.log(this.sites[this.currentSite], this.currentSite)
 			this.currentSite = e.target.id
 		},
 

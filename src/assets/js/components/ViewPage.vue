@@ -16,20 +16,23 @@
 			<component :is="currentModule" v-bind="currentProperties"></component>
 			
 		</div>
+		<footer class="footer">
+			<settings></settings>
+		</footer>
 	</div>
 </template>
 <script>
-	import MenuTitle from './Menu.vue';
-	import todoModule from './ToDo.vue';
+	//обделить все модули и подгружать по необходимости
+	import todoModule from './TodoModule.vue';
 	import bookmarkModule from './BookmarkModule.vue';
-	import weatherModule from './WeatherModule.vue';
-	import datetimeModule from './DateTimeModule.vue';
+	import homeModule from './HomeModule.vue';
 	import searchInput from './SearchInput.vue';
 	import rightItem from './RightItem.vue';
 	import leftItem from './LeftItem.vue';
 	import gitTopList from './GitTopList.vue';
 	import notepadModule from './NotepadModule.vue';
 	import rssNewsModule from './RssNewsModule.vue';
+	import settings from './Settings.vue';
 
 
 
@@ -42,7 +45,7 @@
 			return {
 				menuTitles: ['Home', 'Bookmarks', 'GitHub', 'News'],
 				bookmarksList: [],
-				currentModule: 'rssNewsModule',
+				currentModule: 'homeModule',
 				// todoListArr: [
 				// 	{
 				// 		id: 1,
@@ -63,17 +66,16 @@
 			}
 		},
 		components: {
-			MenuTitle,
+			homeModule,
 			bookmarkModule,
 			todoModule,
-			datetimeModule,
-			weatherModule,
 			searchInput,
 			leftItem,
 			rightItem,
 			gitTopList,
 			notepadModule,
 			rssNewsModule,
+			settings,
 		},
 		
 		methods: {

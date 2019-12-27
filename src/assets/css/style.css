@@ -7,6 +7,8 @@
 @import 'styleParts/_gittoplist';
 @import 'styleParts/_notepad';
 @import 'styleParts/_rssnews';
+@import 'styleParts/_footer';
+@import 'styleParts/_setting';
 /*@import '../../../node_module/font-awesome/css/font-awesome.min';*/
 
 a{
@@ -34,7 +36,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    overflow-y: scroll;
+    overflow: hidden;
 
 }
 .container{
@@ -42,13 +44,11 @@ body{
 }
 .block-s4{
 	padding: 10px;
-	width: 20px;
-	height: 20px;
+	font-size: 1em;
 }
 .block-s6{
 	padding: 20px;
-	width: 30px;
-	height: 30px;
+	font-size: 1.5em;
 }
 
 .today{

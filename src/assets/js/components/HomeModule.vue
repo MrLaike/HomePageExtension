@@ -17,9 +17,3 @@
 	  }
 	}
 </script>
-<style>
-	.main{
-		height: 80vh;
-    	align-items: center;
-	}
-</style>

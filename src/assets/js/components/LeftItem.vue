@@ -6,14 +6,14 @@
 </template>
 <script>
 	export default{
-		data: function(){
+
+		data() {
 			return {
 
 			}
 		},
 		methods: {
-			change: function(moduleName){
-				console.log(moduleName)
+			change(moduleName) {
 				this.$emit('change-module', moduleName)
 			}
 		}

@@ -29,14 +29,26 @@
 		props: ['nodes', 'title', 'url', 'bookmarks'],
 		data: function() {
 			return {
-				
+				bookmarks: "",
 			}
+		},
+		computed:{
+			getBookmarks() {
+				let that = this
+				chrome.bookmarks.getTree(
+					function(bookmarkTreeNodes){
+						that.bookmarks = bookmarkTreeNodes[0].children[0].children
+				})
+			},
 		},
 		components: {
 			treeItem,
 		},
 		methods: {
 			
+		},
+		beforeMount() {
+			this.getBookmarks
 		}
 	}
 

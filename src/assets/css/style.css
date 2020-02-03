@@ -10,6 +10,7 @@
 @import 'styleParts/_footer';
 @import 'styleParts/_setting';
 @import 'styleParts/_weather';
+@import 'styleParts/_randomIdea';
 /*@import '../../../node_module/font-awesome/css/font-awesome.min';*/
 
 a{

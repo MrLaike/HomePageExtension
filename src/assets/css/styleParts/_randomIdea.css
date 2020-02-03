@@ -1,0 +1,10 @@
+.random-idea{
+	text-align: center;
+	font-size: 1.4em;
+	color: white;
+	margin: 8px;
+	span{
+		padding: 5px;
+		background: $primeBackground;
+	}
+}

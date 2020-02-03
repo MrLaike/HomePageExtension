@@ -1,7 +1,7 @@
 <template>
 	<div class="bookmark">
 		<div class="filter">
-			<div class="sort-block">
+			<div class="sorting">
 				<p>Sort by: </p>
 				<select>
 					<option value="date">date</option>

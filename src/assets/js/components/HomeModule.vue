@@ -1,5 +1,8 @@
 <template>
-	<datetime-module></datetime-module>
+	<div class="home">
+		<datetime-module></datetime-module>
+		<weather-module></weather-module>
+	</div>
 </template>
 <script>
 	import datetimeModule from './DateTimeModule.vue';

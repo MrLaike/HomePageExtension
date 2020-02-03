@@ -9,6 +9,7 @@
 @import 'styleParts/_rssnews';
 @import 'styleParts/_footer';
 @import 'styleParts/_setting';
+@import 'styleParts/_weather';
 /*@import '../../../node_module/font-awesome/css/font-awesome.min';*/
 
 a{
@@ -70,3 +71,4 @@ body{
 	/*overflow-y: auto;*/
 	align-items: center;
 }
+

@@ -49,19 +49,21 @@
 <script>
 import ClickOutside from 'vue-click-outside';
 
-let LOCALSTORAGE_KEY = "configs"
-
 var configStorage = {
-	fetch() {
-		var configs = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY) || '[]')
-		return configs
-	},
-	save(configs) {
-		//when close tab
-		localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(configs))
-		
+		localstorageKey: null,
+		fetch() {
+			var configs = JSON.parse(localStorage.getItem(this.localstorageKey) || '[]')
+			return configs
+		},
+		save(configs) {
+			//when close tab
+			localStorage.setItem(this.localstorageKey, JSON.stringify(configs))
+			
+		},
 	}
-}
+
+configStorage.localstorageKey = "configs"
+
 
 let settingConfig = {
 	"themes": {

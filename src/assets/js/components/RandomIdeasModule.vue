@@ -16,7 +16,7 @@ export default {
 	methods: {
 		getRandomIdea(){
 			this.idea = this.ideaList[Math.round(Math.random() * 10)%this.ideaList.length]
-			console.log(Math.round(Math.random() * 10))
+			
 		}
 	},
 	mounted(){

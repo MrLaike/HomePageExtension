@@ -15,6 +15,27 @@
 <script>
 	import axios from 'axios';
 	const API_KEY = '4323547974d336c1256a9ac0d40bd330';
+
+	var configStorage = {
+		localStorageKey: null,
+		ttl: 2, // clear this localstorage every 2 hour
+		fetch() {
+			return JSON.parse(localStorage.getItem(this.localStorageKey) || '{}')
+		},
+		save(configs) {
+			//when close tab
+			localStorage.setItem(this.localStorageKey, JSON.stringify(configs))
+			
+		},
+		checkTimeleft() {
+			let now = new Date().getTime();
+			let storageTime = localStorage.getItem(this.localStorageKey + 'Timeleft') 
+			if(now - storageTime > this.ttl * 60 * 60 * 1000){
+				localStorage.setItem(this.localStorageKey, 0)
+			}
+		}
+	}
+
 	export default{
 		name: 'WeatherModule',
 		data(){
@@ -27,7 +48,15 @@
 		},
 		methods: {
 			getWeather(){
-				axios.get('http://api.openweathermap.org/data/2.5/weather?q=' + this.city + '&units=' + this.metric + '&appid=' + API_KEY).then(response => (this.weather = response))
+				configStorage.localStorageKey = 'weather'
+				configStorage.checkTimeleft();
+				
+				if(!!configStorage.fetch()){
+					this.weather = configStorage.fetch()
+				}else{
+					axios.get('http://api.openweathermap.org/data/2.5/weather?q=' + this.city + '&units=' + this.metric + '&appid=' + API_KEY).then(response => {configStorage.save(response);this.weather = response;})
+					localStorage.setItem('weatherTimeleft', new Date().getTime())
+				}
 			}
 		},
 		mounted(){
